@@ -1,0 +1,22 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title = "HashStag" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Digital forensics playground and personal website" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+		<slot />
+	</body>
+</html>
